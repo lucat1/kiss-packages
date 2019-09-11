@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+git clone https://github.com/chjj/compton
+cd compton
+
+export PATH=$PATH:$(pwd)
+export NO_DBUS=y
+export NO_REGEX_PCRE=y
+
+make
+mkdir -p $1/usr/bin
+mkdir -p $1/etc/xdg
+install -m775 compton bin/compton-trans $1/usr/bin
+install -m644 compton.sample.conf $1/etc/xdg/
