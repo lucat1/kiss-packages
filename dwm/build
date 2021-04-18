@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+patch -p1 < config.patch
+
+# Amend install path to '/usr'.
+sed -i'' "s#/usr/local#/usr#" config.mk
+
+make
+make DESTDIR="$1" install
