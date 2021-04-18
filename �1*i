@@ -1,0 +1,22 @@
+ls
+clear
+ls
+/bin/ls
+which ls
+exa
+ls
+clear
+ls
+ls -al
+rm 52
+ls
+clear
+ls
+cd neovim/
+ls
+clear
+ls
+kiss-link 
+kiss-new 
+kiss-new backlight_control 1.3 
+cd backlight_control/

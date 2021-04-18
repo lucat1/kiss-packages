@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+patch -p1 < fix-makefile.patch
+
+make
+make DESTDIR=$1 install

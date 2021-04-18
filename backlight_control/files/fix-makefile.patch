@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 21eb858..ad22efd 100644
+--- a/Makefile
++++ b/Makefile
+@@ -18,7 +18,7 @@ clean:
+ 	rm -f backlight_control
+ 
+ install: backlight_control
+-	install -D -m 4755 -o root -g root $< $(DESTDIR)$(prefix)/bin/$<
++	install -D -m 4755 $< $(DESTDIR)$(prefix)/bin/$<
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)$(prefix)/bin/backlight_control
