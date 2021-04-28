@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+patch -p1 < dwm-notitle-6.2.diff
 patch -p1 < config.patch
 
 # Amend install path to '/usr'.

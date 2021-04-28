@@ -1,8 +1,8 @@
 diff --git a/config.def.h b/config.def.h
-index 1c0b587..5623eef 100644
+index 19330cd..5623eef 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -1,115 +1,138 @@
+@@ -1,114 +1,138 @@
  /* See LICENSE file for copyright and license details. */
  
 +#include "stdlib.h"
@@ -106,7 +106,7 @@ index 1c0b587..5623eef 100644
 +static const char *dmenucmd[] = {
 +    "dmenu_run", "-m",       dmenumon, "-fn", toolfont, "-nb", background,
 +    "-nf",       foreground, "-sb",    cyan,  "-sf",    gray,  NULL};
-+static const char *termcmd[] = {"st", NULL};
++static const char *termcmd[] = {"alacritty", NULL};
 +static const char *volmute[] = {
 +    "media", "vol", "set", "Master", "toggle", NULL};
 +static const char *micmute[] = {"amixer", "set", "Capture", "toggle", NULL};
@@ -207,7 +207,6 @@ index 1c0b587..5623eef 100644
 -	/* click                event mask      button          function        argument */
 -	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 -	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
--	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 -	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 -	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 -	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
